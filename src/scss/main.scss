@@ -476,6 +476,21 @@ section {
     z-index: 1;
   }
 
+  &::after {
+    position: absolute;
+    content: '';
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='66' height='9' viewBox='0 0 66 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 4C0.723858 4 0.5 4.22386 0.5 4.5C0.5 4.77614 0.723858 5 1 5V4ZM65.3536 4.85355C65.5488 4.65829 65.5488 4.34171 65.3536 4.14645L62.1716 0.964466C61.9763 0.769204 61.6597 0.769204 61.4645 0.964466C61.2692 1.15973 61.2692 1.47631 61.4645 1.67157L64.2929 4.5L61.4645 7.32843C61.2692 7.52369 61.2692 7.84027 61.4645 8.03553C61.6597 8.2308 61.9763 8.2308 62.1716 8.03553L65.3536 4.85355ZM1 5H65V4H1V5Z' fill='%23343A45'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 64px;
+    height: 7px;
+    z-index: 2;
+  }
+
   .btn-text {
     position: relative;
     z-index: 2;
