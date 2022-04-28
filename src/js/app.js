@@ -67,8 +67,8 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
     },
     on: {
         resize(swiper) {
-            swiper.updateAutoHeight(300);
             swiper.update();
+            swiper.updateAutoHeight(300);
         }
     },
     breakpoints: {
@@ -101,3 +101,13 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
+
+
+document.body.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target.closest('[data-burger-menu]')) {
+        target.closest('[data-burger-menu]').classList.toggle('active');
+        document.querySelector('[data-header-menu]').classList.toggle('active');
+        document.body.classList.toggle('hidden');
+    }
+})
