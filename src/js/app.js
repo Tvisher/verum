@@ -110,4 +110,9 @@ document.body.addEventListener('click', (e) => {
         document.querySelector('[data-header-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
     }
+});
+
+window.addEventListener('load', (e) => {
+    document.body.style.opacity = 1;
 })
+
