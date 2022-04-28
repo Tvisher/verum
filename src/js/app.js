@@ -114,5 +114,36 @@ document.body.addEventListener('click', (e) => {
 
 window.addEventListener('load', (e) => {
     document.body.style.opacity = 1;
-})
+});
 
+
+
+
+
+// // Счётчики секции с клиентами
+// function outNum(num, elem, step, time) {
+//     let e = elem,
+//         n = 0;
+//     let timerInterval = time;
+//     let interval = setInterval(() => {
+//         n = n + step;
+//         if (n + 1 >= num) {
+//             clearInterval(interval);
+//             let lowTimerInterval = time * 20;
+//             let lowInterval = setInterval(() => {
+//                 n = n + step;
+//                 if (n >= num) {
+//                     clearInterval(lowInterval);
+//                 }
+//                 e.innerHTML = n;
+//             }, lowTimerInterval);
+//         }
+//         e.innerHTML = n;
+//     }, timerInterval);
+// }
+
+// document.querySelectorAll('[data-counter-elem]').forEach((element, index) => {
+//     const iterableNum = +element.textContent;
+//     console.log(iterableNum);
+//     outNum(iterableNum, element, 1, 15 + index);
+// });
