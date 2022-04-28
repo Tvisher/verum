@@ -1049,6 +1049,15 @@ body {
     max-width: 100vw;
   }
 
+  .fullscreen-slider .swiper-pagination {
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+
+  .fullscreen-slider .swiper-pagination-bullet {
+    width: inherit;
+  }
+
   .services__list .list-item {
     flex: 1 0 250px;
   }
@@ -1241,7 +1250,7 @@ body {
   }
 
   .fullscreen-slider .swiper-pagination {
-    top: 72vw;
+    // top: 74vw;
   }
 
   .services__list {
