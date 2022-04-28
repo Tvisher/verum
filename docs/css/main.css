@@ -1943,6 +1943,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 html {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
   line-height: 140%;
   font-size: 16px;
