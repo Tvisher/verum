@@ -763,20 +763,11 @@ body {
   position: absolute;
   top: 75px;
   left: 50%;
-  transform: translateX(-120%);
+  transform: translate3d(-120%, 0, 0);
   padding: 30px;
   max-width: 520px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(16px);
-
-  // &::after {
-  //   position: absolute;
-  //   content: '';
-  //   left: 0;
-  //   top: 0;
-  //   background: rgba(255, 255, 255, 0.6);
-  //   backdrop-filter: blur(16px);
-  // }
 
   .section-title {
     margin-bottom: 10px;
@@ -899,7 +890,7 @@ body {
   }
 
   .contacts-block {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 
   .styles-btn-wrapper {
@@ -1115,7 +1106,7 @@ body {
   .contacts-block {
     order: -1;
     position: static;
-    transform: translate(0);
+    transform: translate3d(0, 0, 0);
     padding: 0 20px;
     margin-bottom: 30px;
     backdrop-filter: none;
