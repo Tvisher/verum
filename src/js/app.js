@@ -94,7 +94,7 @@ AOS.init({
 
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 80, // offset (in px) from the original trigger point
+    offset: 25, // offset (in px) from the original trigger point
     delay: 100, // values from 0 to 3000, with step 50ms
     duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
@@ -111,15 +111,14 @@ document.body.addEventListener('click', (e) => {
         document.querySelector('[data-header-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
     }
+    if (target.closest('.fullscreen-slider__desc')) {
+        target.closest('.fullscreen-slider__desc').classList.add('open');
+    }
 });
 
 window.addEventListener('load', (e) => {
     document.body.style.opacity = 1;
 });
-
-
-
-
 
 // // Счётчики секции с клиентами
 // function outNum(num, elem, step, time) {
