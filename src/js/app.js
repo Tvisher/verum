@@ -6,7 +6,6 @@ import Swiper, {
     Pagination,
     Autoplay,
     EffectFade,
-    Mousewheel
 } from 'swiper';
 
 import AOS from 'aos';
@@ -53,8 +52,11 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
     slidesPerView: 1,
     effect: 'fade',
     grabCursor: true,
-    autoHeight: true,
+    // autoHeight: true,
     loop: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     fadeEffect: {
         crossFade: true
     },
@@ -68,8 +70,7 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
     on: {
         resize(swiper) {
             swiper.update();
-            swiper.updateAutoHeight(300);
-        }
+        },
     },
     breakpoints: {
         768: {
