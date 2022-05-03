@@ -6,11 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VERUM</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preload" href="./fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Ubuntu-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Ubuntu-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Ubuntu-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.min.css">
     <script> </script>
 </head>
 
 <body>
+    <header>
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="#" class="header__logo">
+                <img src="img/logo-white.svg" alt="">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                        <a href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="400">
+                        <a href="#">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                        <a href="#">
+                            Проекты
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                        <a href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__phone" data-aos="fade-down">
+                <a class="header__phone-link" href="tel:+78122230168">+7 (812) 223 01 68</a>
+                <span>заказать звонок</span>
+            </div>
+            <div class="header__burger" data-burger-menu data-aos="zoom-in">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
     <div class="mobile-menu" data-header-menu>
         <div class="container">
             <nav class="mobile-menu__nav">
@@ -45,53 +95,7 @@
             </nav>
         </div>
     </div>
-    <header>
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="header__logo">
-                    <img src="img/logo-white.svg" alt="">
-                </a>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="list-item" data-aos="fade-in" data-aos-delay="800">
-                            <a href="#">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="list-item" data-aos="fade-in" data-aos-delay="600">
-                            <a href="#">
-                                Услуги
-                            </a>
-                        </li>
-                        <li class="list-item" data-aos="fade-in" data-aos-delay="400">
-                            <a href="#">
-                                Каталог
-                            </a>
-                        </li>
-                        <li class="list-item" data-aos="fade-in" data-aos-delay="600">
-                            <a href="#">
-                                Проекты
-                            </a>
-                        </li>
-                        <li class="list-item" data-aos="fade-in" data-aos-delay="800">
-                            <a href="#">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__phone" data-aos="fade-down">
-                    <a class="header__phone-link" href="tel:+78122230168">+7 (812) 223 01 68</a>
-                    <span>заказать звонок</span>
-                </div>
-                <div class="header__burger" data-burger-menu data-aos="zoom-in">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
+</header>
     <main>
         <section class="fullscreen-section first">
             <div class="fullscreen-slider swiper" data-aos="fade-in">
@@ -550,22 +554,22 @@
         </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="footer-wrapper">
-                <div class="footer-wrapper__item start" data-aos="fade-in" data-aos-delay="800">
-                    <a href="#">Политика конфиденциальности</a>
-                    <a href="#">Все права защищены © 2022</a>
-                </div>
-                <div class="footer-wrapper__item logo" data-aos="zoom-in-down" data-aos-delay="400">
-                    <a href="#"> <img src="img/logo-white.svg" alt=""></a>
-                </div>
-                <div class="footer-wrapper__item last" data-aos="fade-in" data-aos-delay="800">
-                    <a href="#">Дизайн и разработка</a>
-                    <a href="#">Voxel.kz</a>
-                </div>
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-wrapper__item start" data-aos="fade-in" data-aos-delay="800">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Все права защищены © 2022</a>
+            </div>
+            <div class="footer-wrapper__item logo" data-aos="zoom-in-down" data-aos-delay="400">
+                <a href="#"> <img src="img/logo-white.svg" alt=""></a>
+            </div>
+            <div class="footer-wrapper__item last" data-aos="fade-in" data-aos-delay="800">
+                <a href="#">Дизайн и разработка</a>
+                <a href="#">Voxel.kz</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 <script src="./js/app.min.js"></script>
 

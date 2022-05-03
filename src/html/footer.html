@@ -1,101 +1,21 @@
-<footer class="footer">
-    <div class="container small">
-        <div class="footer__top">
-            <a href="#" class="footer__logo col" data-aos="zoom-in">
-                <img src="@img/footer-logo.svg" alt="">
-            </a>
-            <div class="footer__authorization col" data-aos="zoom-in">
-                <button class="btn blueBtn">Login</button>
-                <button class="btn ghostBtn">Registration</button>
+<footer>
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-wrapper__item start" data-aos="fade-in" data-aos-delay="800">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Все права защищены © 2022</a>
             </div>
-            <nav class="footer__nav col" data-aos="zoom-in">
-                <ul class="nav-list">
-                    <li class="list-item">
-                        <a class="footer__link" href="#">I want to move</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="footer__link" href="#">Already in the USA</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="footer__link" href="#">Useful companies</a>
-                    </li>
-                </ul>
-            </nav>
-            <ul class="footer__links col" data-aos="zoom-in">
-                <li class="list-item">
-                    <a class="footer__link" href="#">About</a>
-                </li>
-                <li class="list-item">
-                    <a class="footer__link" href="#">I want to add a company</a>
-                </li>
-                <li class="list-item">
-                    <a class="footer__link" href="#">I want to write an article</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__bottom" data-aos="zoom-in" data-aos-offset="-30">
-            <div class="footer__copyright">© 2022 All Rights Reserved.</div>
-            <a href="#" class="footer__web-logo">
-                <img src="@img/web-logo.svg" alt="">
-            </a>
+            <div class="footer-wrapper__item logo" data-aos="zoom-in-down" data-aos-delay="400">
+                <a href="#"> <img src="@img/logo-white.svg" alt=""></a>
+            </div>
+            <div class="footer-wrapper__item last" data-aos="fade-in" data-aos-delay="800">
+                <a href="#">Дизайн и разработка</a>
+                <a href="#">Voxel.kz</a>
+            </div>
         </div>
     </div>
 </footer>
-
-<div class="auth-modal" id="registration">
-    <button class="modal-close"></button>
-    <div class="auth-modal__body">
-        <h3 class="auth-modal__title">Registration</h3>
-        <form action="#" class="auth-modal__form">
-            <label class="custom__label">
-                <span class="custom__label-text">Username</span>
-                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
-            </label>
-            <label class="custom__label">
-                <span class="custom__label-text">Email</span>
-                <input autocomplete="off" type="email" name="email" class="custom__label-input" required data-focus-input>
-            </label>
-            <label class="custom__label">
-                <span class="custom__label-text">Password</span>
-                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
-            </label>
-            <label class="custom__label">
-                <span class="custom__label-text">Confirm password</span>
-                <input autocomplete="off" type="password" name="password-repeat" class="custom__label-input" required data-focus-input>
-            </label>
-            <label class="custom-checkbox__label">
-                <input type="checkbox" name="registration-checkbox" class="custom-checkbox__input" checked required>
-                <span class="custom-checkbox__text">Accept the <a href="#">terms</a> and <a href="#">policies</a></span>
-            </label>
-            <div class="auth-modal__form-footer">
-                <button type="submit" class="btn blueBtn">Registration</button>
-                or <a class="modal-switch" href="#authorization">Sign in</a>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="auth-modal" id="authorization">
-    <button class="modal-close"></button>
-    <div class="auth-modal__body">
-        <h3 class="auth-modal__title">Sign in</h3>
-        <form action="#" class="auth-modal__form">
-            <label class="custom__label">
-                <span class="custom__label-text">Username</span>
-                <input autocomplete="off" type="text" name="username" class="custom__label-input" required data-focus-input>
-            </label>
-
-            <label class="custom__label">
-                <span class="custom__label-text">Password</span>
-                <input autocomplete="off" type="password" name="password" class="custom__label-input" required data-focus-input>
-            </label>
-            <div class="auth-modal__form-footer">
-                <a href="#" class="foret-pathword">Forget your password ?</a>
-                <button type="submit" class="btn blueBtn">Sign in</button>
-                or <a class="modal-switch" href="#registration">Registration</a>
-            </div>
-        </form>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script src="js/app.min.js"></script>
 </body>
+<script src="./js/app.min.js"></script>
+
+</html>

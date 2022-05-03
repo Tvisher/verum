@@ -1,59 +1,81 @@
-<header class="header" data-aos="fade-down">
-    <span class="flying-target"></span>
+<header>
     <div class="container">
         <div class="header__wrapper">
-            <div class="header__left">
-                <a href="/" class="header__logo">
-                    <img src="@img/main-logo.svg" alt="logo">
-                </a>
-                <div class="select-wrapper">
-                    <select class="header__lang">
-                        <option selected value="en">EN</option>
-                        <option value="ru">RU</option>
-                    </select>
-                </div>
-            </div>
-            <nav class="header__nav" data-mobile-menu>
-                <span class="nav__title">Menu</span>
+            <a href="#" class="header__logo">
+                <img src="@img/logo-white.svg" alt="">
+            </a>
+            <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="hover-elem">
-                        <a href="#">I want to move</a>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                        <a href="#">
+                            Главная
+                        </a>
                     </li>
-                    <li class="hover-elem">
-                        <a href="#">Already in the USA</a>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                        <a href="#">
+                            Услуги
+                        </a>
                     </li>
-                    <li class="hover-elem">
-                        <a href="#">Useful companies</a>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="400">
+                        <a href="#">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                        <a href="#">
+                            Проекты
+                        </a>
+                    </li>
+                    <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                        <a href="#">
+                            Контакты
+                        </a>
                     </li>
                 </ul>
-                <select class="nav__lang">
-                    <option selected value="en">EN</option>
-                    <option value="ru">RU</option>
-                </select>
             </nav>
-            <div class="header__right">
-                <button class="header__search">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z" fill="black" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0977 20.6834 22.0977 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z" fill="black" />
-                    </svg>
-                </button>
-                <button class="header__login btn blueBtn" id="login-btn">
-                    <div class="login-ico">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-                            <path d="M783.7,755.3c0,12.9-10.3,25.8-25.8,25.8c-12.9,0-25.8-10.3-25.8-25.8v-2.6v-2.6c-15.5-113.5-113.5-196-229.5-196H500h-2.6c-116.1,0-211.5,82.5-229.5,193.4c0,2.6,0,5.2,0,7.7v2.6c0,15.5-12.9,25.8-25.8,25.8c-12.9,0-25.8-12.9-25.8-25.8l0,0l0,0v-2.6c0-2.6,0-5.2,0-5.2c12.9-103.2,82.5-188.3,177.9-224.4c-54.2-36.1-90.3-98-90.3-167.6c0-110.9,85.1-198.6,196-198.6c110.9,0,196,90.3,196,198.6c0,72.2-36.1,134.1-90.3,167.6c92.8,36.1,162.5,118.6,177.9,221.8C783.7,747.6,783.7,750.2,783.7,755.3L783.7,755.3z M649.6,355.6c0-82.5-67.1-149.6-149.6-149.6s-149.6,67.1-149.6,149.6c0,82.5,67.1,149.6,149.6,149.6S649.6,438.1,649.6,355.6z" />
-                            <path d="M500,990C229.2,990,10,770.8,10,500C10,229.2,229.2,10,500,10c270.8,0,490,219.2,490,490C990,770.8,770.8,990,500,990z M500,53.8C255,53.8,53.8,252.4,53.8,500c0,247.6,198.6,446.2,446.2,446.2c247.6,0,446.2-198.6,446.2-446.2C946.2,252.4,745,53.8,500,53.8z" />
-                            </g>
-                        </svg>
-                    </div>
-                    <span class="login-text">Login</span>
-                </button>
-                <div class="header__burger" id="open-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div class="header__phone" data-aos="fade-down">
+                <a class="header__phone-link" href="tel:+78122230168">+7 (812) 223 01 68</a>
+                <span>заказать звонок</span>
             </div>
+            <div class="header__burger" data-burger-menu data-aos="zoom-in">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu" data-header-menu>
+        <div class="container">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="list-item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            Проекты
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <a href="tel:+78122230168" class="mobile-menu__phone">+7 (812) 223 01 68</a>
+            </nav>
         </div>
     </div>
 </header>
