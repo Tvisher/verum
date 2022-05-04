@@ -2,7 +2,7 @@
 import * as baseFunction from './modules/functions.js';
 import './vendors/vendors.js';
 import Swiper, {
-    Navigation,
+    Manipulation,
     Pagination,
     Autoplay,
     EffectFade,
@@ -36,7 +36,6 @@ baseFunction.testWebP();
             });
             //Добавление класса к инпуту если он заполнен
             const inputValue = input.value.trim();
-            console.log(inputValue);
             if (inputValue.length === 0) {
                 transformtext.classList.remove('fixed');
             } else {
@@ -81,6 +80,68 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
 });
 
 
+
+const boundlessSlider = new Swiper('.boundless-slider', {
+    speed: 1200,
+    slidesPerView: 1,
+    grabCursor: true,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        }
+    }
+});
+
+
+const materialSlider = new Swiper('.material-section__slider', {
+    modules: [Manipulation],
+    speed: 2000,
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 99,
+    slideToClickedSlide: true,
+    observeParents: true,
+    breakpoints: {
+        1024: {
+            spaceBetween: 30,
+        },
+        576: {
+            spaceBetween: 20,
+        }
+    },
+    on: {
+        //обновляем слайдер для коррекного отображения 
+        slideChangeTransitionStart(slider) {
+            slider.updateSize();
+            slider.disable();
+            console.log('slideChangeTransitionStart');
+        },
+        slideChangeTransitionEnd(slider) {
+            slider.updateSize();
+            slider.enable();
+            console.log('slideChangeTransitionEnd');
+        },
+        resize(slider) {
+            slider.updateSize();
+            slider.update();
+        },
+        beforeLoopFix(slider) {
+            slider.updateSize();
+        }
+    }
+});
+
+
 window.addEventListener('load', (e) => {
     document.body.style.opacity = 1;
 });
@@ -106,7 +167,7 @@ AOS.init({
 });
 
 //логика работы меню бургер
-document.body.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
@@ -116,6 +177,18 @@ document.body.addEventListener('click', (e) => {
     if (target.closest('.fullscreen-slider__desc')) {
         target.closest('.fullscreen-slider__desc').classList.add('open');
     }
+    if (target.closest('[data-material-variant]')) {
+        const materialVariant = target.closest('[data-material-variant]');
+        const materialVariantId = materialVariant.dataset.materialVariant;
+
+        document.querySelector('[data-material-variant].active').classList.remove('active')
+        materialVariant.classList.add('active');
+
+        document.querySelector('[data-material-slider].show').classList.remove('show');
+        document.querySelector(`[data-material-slider='${materialVariantId}']`).classList.add('show');
+
+    }
+
 });
 
 // Маска на номера телефона
