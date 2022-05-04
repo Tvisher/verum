@@ -109,14 +109,18 @@ const materialSlider = new Swiper('.material-section__slider', {
     slidesPerView: 'auto',
     centeredSlides: true,
     centeredSlidesBounds: true,
-    freeMode: {
-        enabled: true,
-        sticky: true,
-    },
+
     spaceBetween: 10,
     breakpoints: {
         576: {
             spaceBetween: 20,
+        },
+        768: {
+            freeMode: {
+                enabled: true,
+                sticky: true,
+                momentumBounce: false
+            },
         },
         1024: {
             spaceBetween: 30,
@@ -135,18 +139,24 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
         slideChangeTransitionEnd(slider) {
             // slider.enable();
+            if (window.innerWidth > 768) {
+                return
+            }
             console.log('asdasd');
             slider.$el[0].querySelector('.custom-active').classList.remove('custom-active');
             const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
             activeSlide.classList.add('custom-active');
             slider.updateSize();
             activeSlide.addEventListener('transitionend', (e) => {
+                slider.slideTo(slider.realIndex);
                 slider.updateSlides();
-                slider.slideTo(slider.activeIndex);
             });
         },
 
         click(slider, event) {
+            if (window.innerWidth <= 768) {
+                return
+            }
             const activeSlide = slider.clickedSlide;
             slider.$el[0].querySelector('.custom-active').classList.remove('custom-active');
             activeSlide.classList.add('custom-active');
