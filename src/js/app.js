@@ -105,9 +105,14 @@ const boundlessSlider = new Swiper('.boundless-slider', {
 
 const materialSlider = new Swiper('.material-section__slider', {
     modules: [Manipulation, FreeMode],
-    speed: 1200,
+    speed: 800,
     slidesPerView: 'auto',
-    freeMode: true,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    freeMode: {
+        enabled: true,
+        sticky: true,
+    },
     spaceBetween: 10,
     breakpoints: {
         576: {
@@ -118,8 +123,11 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
     },
     on: {
-        init(swiper) {
-            swiper.slides[0].classList.add('custom-active')
+        init(slider) {
+            // slider.slides[0].classList.add('custom-active');
+            // setTimeout(() => {
+            //     slider.updateSize();
+            // }, 2000);
         },
         //обновляем слайдер для коррекного отображения 
         slideChangeTransitionStart(slider) {
@@ -127,7 +135,15 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
         slideChangeTransitionEnd(slider) {
             // slider.enable();
-            // slider.updateSize();
+            console.log('asdasd');
+            slider.$el[0].querySelector('.custom-active').classList.remove('custom-active');
+            const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
+            activeSlide.classList.add('custom-active');
+            slider.updateSize();
+            activeSlide.addEventListener('transitionend', (e) => {
+                slider.updateSlides();
+                slider.slideTo(slider.activeIndex);
+            });
         },
 
         click(slider, event) {
@@ -138,7 +154,7 @@ const materialSlider = new Swiper('.material-section__slider', {
             activeSlide.addEventListener('transitionend', (e) => {
                 slider.updateSlides();
                 slider.slideTo(slider.clickedIndex);
-            })
+            });
         }
     }
 });

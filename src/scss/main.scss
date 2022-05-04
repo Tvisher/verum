@@ -1642,7 +1642,7 @@ body {
       .slider-descr {
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 1s;
+        transition: opacity 0.6s ease 1.4s, visibility 0.6s ease .4s;
       }
     }
 
