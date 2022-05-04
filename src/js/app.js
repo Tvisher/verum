@@ -139,24 +139,23 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
         slideChangeTransitionEnd(slider) {
             // slider.enable();
-            if (window.innerWidth > 768) {
-                return
-            }
-            console.log('asdasd');
-            slider.$el[0].querySelector('.custom-active').classList.remove('custom-active');
-            const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
-            activeSlide.classList.add('custom-active');
-            slider.updateSize();
-            activeSlide.addEventListener('transitionend', (e) => {
-                slider.slideTo(slider.realIndex);
-                slider.updateSlides();
-            });
-        },
+            if (window.innerWidth > 768) return;
 
+            setTimeout(() => {
+                slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
+                const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
+                console.log(activeSlide);
+                activeSlide.classList.add('custom-active');
+                slider.updateSize();
+                activeSlide.addEventListener('transitionend', (e) => {
+                    slider.slideTo(slider.realIndex);
+                    slider.updateSlides();
+                });
+            }, 200);
+        },
         click(slider, event) {
-            if (window.innerWidth <= 768) {
-                return
-            }
+            if (window.innerWidth <= 768) return;
+
             const activeSlide = slider.clickedSlide;
             slider.$el[0].querySelector('.custom-active').classList.remove('custom-active');
             activeSlide.classList.add('custom-active');
