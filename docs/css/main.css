@@ -3104,7 +3104,7 @@ body {
 .material-section__slider .swiper-slide.custom-active .slider-descr {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 0.4s;
+  transition: opacity 0.6s ease 1.2s, visibility 0.6s ease 1.2s;
 }
 
 .title-wrapper {
@@ -3641,12 +3641,12 @@ body {
     order: -1;
   }
 
-  .material-section__slider .swiper-slide.custom-active {
-    width: 95%;
+  .material-section__slider .swiper-slide {
+    width: 90vw !important;
   }
 
   .material-section__slider .swiper-slide .slider-descr {
-    transition: opacity 0.6s ease 0s, visibility 0.6s ease 0s;
+    transition: opacity 0.6s ease 0s, visibility 0.6s ease 0s !important;
   }
 }
 

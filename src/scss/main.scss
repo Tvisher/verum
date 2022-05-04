@@ -1642,17 +1642,17 @@ body {
       .slider-descr {
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.6s ease 1.4s, visibility 0.6s ease .4s;
+        transition: opacity 0.6s ease 1.2s, visibility 0.6s ease 1.2s;
       }
     }
 
     @media (max-width: 768px) {
-      &.custom-active {
-        width: 95%;
-      }
+      width: 90vw !important;
+
+      &.custom-active {}
 
       .slider-descr {
-        transition: opacity 0.6s ease 0s, visibility 0.6s ease 0s;
+        transition: opacity 0.6s ease 0s, visibility 0.6s ease 0s !important;
       }
     }
 
