@@ -1605,7 +1605,7 @@ body {
 
   .swiper-slide {
     width: 300px;
-    transition: width 1.2s ease-in-out;
+    transition: width 1s ease-in-out;
 
     .slider-image {
       width: 100%;
@@ -1636,18 +1636,18 @@ body {
       @include pruning(4);
     }
 
-    &.swiper-slide-active {
+    &.custom-active {
       width: 682px;
 
       .slider-descr {
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 1.4s;
+        transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 1s;
       }
     }
 
     @media (max-width: 768px) {
-      &.swiper-slide-active {
+      &.custom-active {
         width: 95%;
       }
 

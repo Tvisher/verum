@@ -3057,7 +3057,7 @@ body {
 
 .material-section__slider .swiper-slide {
   width: 300px;
-  transition: width 1.2s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 .material-section__slider .swiper-slide .slider-image {
@@ -3097,14 +3097,14 @@ body {
   box-orient: vertical;
 }
 
-.material-section__slider .swiper-slide.swiper-slide-active {
+.material-section__slider .swiper-slide.custom-active {
   width: 682px;
 }
 
-.material-section__slider .swiper-slide.swiper-slide-active .slider-descr {
+.material-section__slider .swiper-slide.custom-active .slider-descr {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 1.4s;
+  transition: opacity 0.6s ease 1.4s, visibility 0.6s ease 1s;
 }
 
 .title-wrapper {
@@ -3641,7 +3641,7 @@ body {
     order: -1;
   }
 
-  .material-section__slider .swiper-slide.swiper-slide-active {
+  .material-section__slider .swiper-slide.custom-active {
     width: 95%;
   }
 
