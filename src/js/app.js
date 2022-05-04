@@ -104,11 +104,11 @@ const boundlessSlider = new Swiper('.boundless-slider', {
 
 const materialSlider = new Swiper('.material-section__slider', {
     modules: [Manipulation],
-    speed: 2000,
+    speed: 1200,
     slidesPerView: 'auto',
     spaceBetween: 10,
     loop: true,
-    loopedSlides: 99,
+    loopedSlides: 10,
     slideToClickedSlide: true,
     observeParents: true,
     breakpoints: {
@@ -116,6 +116,7 @@ const materialSlider = new Swiper('.material-section__slider', {
             spaceBetween: 30,
         },
         576: {
+            speed: 2000,
             spaceBetween: 20,
         }
     },
@@ -123,21 +124,20 @@ const materialSlider = new Swiper('.material-section__slider', {
         //обновляем слайдер для коррекного отображения 
         slideChangeTransitionStart(slider) {
             slider.updateSize();
+            slider.updateProgress();
             slider.disable();
-            console.log('slideChangeTransitionStart');
         },
         slideChangeTransitionEnd(slider) {
             slider.updateSize();
             slider.enable();
-            console.log('slideChangeTransitionEnd');
         },
         resize(slider) {
             slider.updateSize();
             slider.update();
         },
-        beforeLoopFix(slider) {
-            slider.updateSize();
-        }
+        // beforeLoopFix(slider) {
+        //     slider.updateSize();
+        // }
     }
 });
 

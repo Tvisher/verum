@@ -1605,7 +1605,7 @@ body {
 
   .swiper-slide {
     width: 300px;
-    transition: width 1.5s ease;
+    transition: width 1.2s ease-in-out;
 
     .slider-image {
       width: 100%;
@@ -1652,11 +1652,13 @@ body {
       }
 
       .slider-descr {
-        transition: opacity 0.6s ease .4s, visibility 0.6s ease .4s;
+        transition: opacity 0.6s ease 0s, visibility 0.6s ease 0s;
       }
     }
 
     @media (max-width: 576px) {
+      transition: width .5s ease-in-out;
+
       .slider-image {
         height: 60vw;
       }
