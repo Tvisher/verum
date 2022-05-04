@@ -6,6 +6,7 @@ import Swiper, {
     Pagination,
     Autoplay,
     EffectFade,
+    FreeMode
 } from 'swiper';
 
 import AOS from 'aos';
@@ -103,9 +104,10 @@ const boundlessSlider = new Swiper('.boundless-slider', {
 
 
 const materialSlider = new Swiper('.material-section__slider', {
-    modules: [Manipulation],
+    modules: [Manipulation, FreeMode],
     speed: 1200,
     slidesPerView: 'auto',
+    freeMode: true,
     spaceBetween: 10,
     breakpoints: {
         576: {
