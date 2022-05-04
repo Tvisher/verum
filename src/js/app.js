@@ -123,11 +123,11 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
         //обновляем слайдер для коррекного отображения 
         slideChangeTransitionStart(slider) {
-            slider.disable();
+            // slider.disable();
         },
         slideChangeTransitionEnd(slider) {
-            slider.enable();
-            slider.updateSize();
+            // slider.enable();
+            // slider.updateSize();
         },
 
         click(slider, event) {
