@@ -139,19 +139,21 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
         slideChangeTransitionEnd(slider) {
             // slider.enable();
+            console.log(slider);
             if (window.innerWidth > 768) return;
 
-            setTimeout(() => {
-                slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
-                const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
-                console.log(activeSlide);
-                activeSlide.classList.add('custom-active');
-                slider.updateSize();
-                activeSlide.addEventListener('transitionend', (e) => {
-                    slider.slideTo(slider.realIndex);
-                    slider.updateSlides();
-                });
-            }, 200);
+            // setTimeout(() => {
+            slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
+            // const activeSlide = slider.$el[0].querySelector('.swiper-slide.swiper-slide-active');
+            const activeSlide = slider.slides[slider.activeIndex];
+
+            activeSlide.classList.add('custom-active');
+            slider.updateSize();
+            activeSlide.addEventListener('transitionend', (e) => {
+                slider.slideTo(slider.realIndex);
+                slider.updateSlides();
+            });
+            // }, 200);
         },
         click(slider, event) {
             if (window.innerWidth <= 768) return;
