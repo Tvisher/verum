@@ -2082,7 +2082,7 @@ button {
 
 .header__logo {
   height: 60px;
-  width: 200px;
+  width: 327px;
   overflow: hidden;
 }
 
@@ -2131,7 +2131,7 @@ button {
 }
 
 .header__phone {
-  padding-left: 30px;
+  padding-left: 10px;
   color: #59677E;
   font-size: 12px;
   font-weight: 400;
@@ -3345,6 +3345,10 @@ body {
   .header__nav-list .list-item {
     padding: 0px 10px;
   }
+
+  .header__logo {
+    width: 250px;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -3441,11 +3445,6 @@ body {
 
   .header__wrapper {
     padding: 20px 0;
-  }
-
-  .header__logo {
-    width: 160px;
-    height: 50px;
   }
 
   .header__burger {
@@ -3750,6 +3749,13 @@ body {
 @media screen and (max-width: 480px) {
   .container {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    width: 227px;
+    height: 50px;
   }
 }
 

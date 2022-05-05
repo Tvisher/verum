@@ -144,7 +144,7 @@ li {
 
 .header__logo {
   height: 60px;
-  width: 200px;
+  width: 327px;
   overflow: hidden;
 
   img,
@@ -196,7 +196,7 @@ li {
 }
 
 .header__phone {
-  padding-left: 30px;
+  padding-left: 10px;
   color: $brand-gray;
   font-size: 12px;
   font-weight: 400;
@@ -1302,6 +1302,10 @@ body {
   .header__nav-list .list-item {
     padding: 0px 10px;
   }
+
+  .header__logo {
+    width: 250px;
+  }
 }
 
 
@@ -1322,10 +1326,7 @@ body {
     padding: 20px 0;
   }
 
-  .header__logo {
-    width: 160px;
-    height: 50px;
-  }
+
 }
 
 
@@ -1884,4 +1885,11 @@ body {
   font-size: 16px;
   color: $brand-gray;
   font-weight: 300;
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    width: 227px;
+    height: 50px;
+  }
 }
