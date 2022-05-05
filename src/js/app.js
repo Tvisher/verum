@@ -86,8 +86,6 @@ const fullscreenSlider = new Swiper('.fullscreen-slider', {
 
 });
 
-
-
 const boundlessSlider = new Swiper('.boundless-slider', {
     speed: 1200,
     slidesPerView: 1,
@@ -107,7 +105,6 @@ const boundlessSlider = new Swiper('.boundless-slider', {
         }
     }
 });
-
 
 const materialSlider = new Swiper('.material-section__slider', {
     modules: [Manipulation, FreeMode],
@@ -139,11 +136,7 @@ const materialSlider = new Swiper('.material-section__slider', {
             slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
             const activeSlide = slider.slides[slider.realIndex];
             activeSlide && activeSlide.classList.add('custom-active');
-            // activeSlide.addEventListener('transitionend', (e) => {
-            //     slider.updateSize();
-            //     slider.slideTo(slider.realIndex);
-            //     slider.updateSlides();
-            // }, { once: true });
+
             setTimeout(() => {
                 slider.updateSize();
                 slider.slideTo(slider.realIndex);
@@ -157,11 +150,7 @@ const materialSlider = new Swiper('.material-section__slider', {
             const previousActiveSlide = slider.$el[0].querySelector('.custom-active');
             previousActiveSlide && previousActiveSlide.classList.remove('custom-active');
             activeSlide && activeSlide.classList.add('custom-active');
-            // activeSlide.addEventListener('transitionend', (e) => {
-            //     slider.updateSize();
-            //     slider.updateSlides();
-            //     slider.slideTo(slider.clickedIndex);
-            // }, { once: true });
+
             setTimeout(() => {
                 slider.updateSize();
                 slider.updateSlides();
