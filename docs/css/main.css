@@ -2131,7 +2131,7 @@ button {
 }
 
 .header__phone {
-  padding-left: 10px;
+  padding-left: 25px;
   color: #59677E;
   font-size: 12px;
   font-weight: 400;
@@ -2814,7 +2814,7 @@ body {
 }
 
 .footer-wrapper .footer-wrapper__item.logo {
-  width: 200px;
+  width: 327px;
   height: 60px;
   overflow: hidden;
 }
