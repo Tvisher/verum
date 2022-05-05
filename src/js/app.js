@@ -214,3 +214,28 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
         mask: '+{7}(000) 000-00-00'
     });
 });
+
+
+// Плавный скролл на сайте
+SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime: 500,
+    // Размер шага в пикселях 
+    stepSize: 75,
+    // Ускорение 
+    accelerationDelta: 100,
+    // Максимальное ускорение
+    accelerationMax: 2,
+
+    // Поддержка клавиатуры
+    keyboardSupport: true,
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50,
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true,
+    pulseScale: 4,
+    pulseNormalize: 1,
+    // Поддержка тачпада
+    touchpadSupport: true,
+});
