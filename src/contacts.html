@@ -1,0 +1,58 @@
+@@include('./html/head.html',{
+"title": "Контакты"
+})
+
+<body>
+    @@include('./html/header.html')
+    <main>
+        <section class="fullscreen-section contacts first">
+            <div class="map-image-container" data-aos="fade-in" data-aos-delay="200">
+                <div class="map-image-wrapper">
+                    <img src="@img/map-img.jpg" alt="">
+                </div>
+            </div>
+            <div class="contacts-block">
+                <div data-aos="fade-up" data-aos-delay="900">
+                    <h4 class="section-title">Контакты</h4>
+                    <p class="contacts-block__descr">Мы работаем с понедельника по пятницу с 10:00 до 20:30. и в субботу с 10:00 до 16:00. Если у вас есть какие-либо вопросы, вы можете связаться с нами любым удобным для вас способом.</p>
+                    <h5 class="contacts-block__title">Приезжайте</h5>
+                    <a href="#" class="contacts-block__link">
+                        Санкт-Петербург, Петергоф.</br>
+                        198504, ул. Ульяновская, 19
+                    </a>
+                    <h5 class="contacts-block__title">Пишите</h5>
+                    <a href="mailto:hello@verumatelier.com" class="contacts-block__link">
+                        hello@verumatelier.com
+                    </a>
+                    <h5 class="contacts-block__title">Звоните</h5>
+                    <a href="tel:+78122230159" class="contacts-block__link">
+                        +7 (812) 223 01 59
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper__item start" data-aos="fade-in" data-aos-delay="800">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Все права защищены © 2022</a>
+                </div>
+                <div class="footer-wrapper__item logo" data-aos="zoom-in-down" data-aos-delay="400">
+                    <a href="#">
+                        <!-- <img src="@img/logo-white.svg" alt=""> -->
+                        <img src="@img/logo-w-descr.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-wrapper__item last" data-aos="fade-in" data-aos-delay="800">
+                    <a href="#">Дизайн и разработка</a>
+                    <a href="#">Voxel.kz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/app.min.js"></script>
+
+</html>

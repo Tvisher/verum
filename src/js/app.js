@@ -216,9 +216,7 @@ document.addEventListener('click', (e) => {
 
         document.querySelector('[data-material-slider].show').classList.remove('show');
         document.querySelector(`[data-material-slider='${materialVariantId}']`).classList.add('show');
-
     }
-
 });
 
 // Маска на номера телефона
@@ -227,6 +225,3 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
         mask: '+{7}(000) 000-00-00'
     });
 });
-
-
-
