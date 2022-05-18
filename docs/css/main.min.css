@@ -2647,6 +2647,7 @@ section {
 }
 
 .form-section__content {
+  padding-left: 30px;
   width: 100%;
 }
 
@@ -2681,13 +2682,13 @@ section {
 .styles-label {
   max-width: 384px;
   height: 62px;
-  width: 100%;
-  border: 1px solid #DDCFC6;
+  width: 98%;
+  border: 1px solid #ddcfc6;
   position: relative;
 }
 
 .styles-label:first-child {
-  margin-right: 60px;
+  margin-right: 4%;
 }
 
 .styles-label .styles-input {
@@ -3471,6 +3472,11 @@ body {
 }
 
 @media (max-width: 992px) {
+  .form-section__content {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
   .advantages {
     display: none;
   }

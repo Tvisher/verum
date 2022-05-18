@@ -110,20 +110,13 @@ const materialSlider = new Swiper('.material-section__slider', {
     modules: [Manipulation, FreeMode],
     speed: 800,
     slidesPerView: 'auto',
-    centeredSlides: true,
-    centeredSlidesBounds: true,
+    // centeredSlides: true,
+    // centeredSlidesBounds: true,
     touchRatio: 0.8,
     spaceBetween: 10,
     breakpoints: {
         576: {
             spaceBetween: 20,
-        },
-        768: {
-            freeMode: {
-                enabled: true,
-                sticky: true,
-                momentumBounce: false
-            },
         },
         1024: {
             spaceBetween: 30,
@@ -132,7 +125,6 @@ const materialSlider = new Swiper('.material-section__slider', {
     on: {
         transitionEnd(slider) {
             if (window.innerWidth > 768) return;
-
             slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
             const activeSlide = slider.slides[slider.realIndex];
             activeSlide && activeSlide.classList.add('custom-active');
@@ -150,12 +142,16 @@ const materialSlider = new Swiper('.material-section__slider', {
             const previousActiveSlide = slider.$el[0].querySelector('.custom-active');
             previousActiveSlide && previousActiveSlide.classList.remove('custom-active');
             activeSlide && activeSlide.classList.add('custom-active');
-
             setTimeout(() => {
                 slider.updateSize();
                 slider.updateSlides();
                 slider.slideTo(slider.clickedIndex);
             }, 1001);
+        },
+        resize(slider) {
+            slider.updateSlides();
+            slider.updateSize();
+
         }
     }
 });
