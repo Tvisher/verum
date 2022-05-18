@@ -4,6 +4,7 @@ import './vendors/vendors.js';
 import Swiper, {
     Manipulation,
     Pagination,
+    Navigation,
     Autoplay,
     EffectFade,
     FreeMode
@@ -107,11 +108,13 @@ const boundlessSlider = new Swiper('.boundless-slider', {
 });
 
 const materialSlider = new Swiper('.material-section__slider', {
-    modules: [Manipulation, FreeMode],
-    speed: 800,
+    modules: [Manipulation, FreeMode, Navigation],
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    speed: 1200,
     slidesPerView: 'auto',
-    // centeredSlides: true,
-    // centeredSlidesBounds: true,
     touchRatio: 0.8,
     spaceBetween: 10,
     breakpoints: {
@@ -123,6 +126,9 @@ const materialSlider = new Swiper('.material-section__slider', {
         },
     },
     on: {
+        init(slider) {
+
+        },
         transitionEnd(slider) {
             if (window.innerWidth > 768) return;
             slider.$el[0].querySelector('.swiper-slide.custom-active').classList.remove('custom-active');
@@ -151,7 +157,6 @@ const materialSlider = new Swiper('.material-section__slider', {
         resize(slider) {
             slider.updateSlides();
             slider.updateSize();
-
         }
     }
 });
