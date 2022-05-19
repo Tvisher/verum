@@ -2384,7 +2384,7 @@ section {
 .services__list .list-item__image {
   width: 100%;
   height: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-top: 68%;
   position: relative;
 }
@@ -2450,7 +2450,7 @@ section {
   width: 100%;
   position: relative;
   padding-top: 104%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .projects-section__item .image-wrap__container {
@@ -2956,7 +2956,7 @@ body {
 
 .boundless-slider .slider-image-container {
   background-color: #DDCFC6;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   height: 0;
   padding-top: 100%;
   width: 100%;
@@ -3402,6 +3402,52 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding-right: 180px;
+}
+
+.mobile-menu .mobile-menu__list .list-item {
+  margin-bottom: 20px;
+}
+
+.mobile-menu .container,
+.mobile-menu .mobile-menu__nav {
+  height: calc(100% - 90px);
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.boundless-slider .slider-title,
+.projects-section__item .item-title,
+.services__list .list-item__title {
+  width: fit-content;
+  color: #343A45;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.boundless-slider .slider-title::before,
+.projects-section__item .item-title::before,
+.services__list .list-item__title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 2px;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.boundless-slider .slider-title:hover::before,
+.projects-section__item .item-title:hover::before,
+.services__list .list-item__title:hover::before {
+  background-color: #59677E;
 }
 
 @media (max-width: 1280px) {
