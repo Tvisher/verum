@@ -2067,3 +2067,49 @@ body {
     }
   }
 }
+
+.modal-form {
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.95);
+
+  .form-section__title,
+  .form-agreement {
+    color: #ffffff;
+  }
+  .styles-label .styles-input,
+  .styles-text {
+    background: transparent;
+    color: #ffffff;
+  }
+  .close-btn {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 48px;
+    height: 48px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1157_314)'%3e%3cpath d='M28.2418 24.0004L47.121 5.12322C48.2929 3.9513 48.2929 2.05126 47.121 0.879429C45.9491 -0.292492 44.049 -0.292492 42.8772 0.879429L23.9999 19.7586L5.12274 0.879429C3.95081 -0.292492 2.05077 -0.292492 0.878941 0.879429C-0.292886 2.05135 -0.29298 3.9514 0.878941 5.12322L19.7581 24.0004L0.878941 42.8777C-0.29298 44.0496 -0.29298 45.9497 0.878941 47.1215C2.05086 48.2933 3.95091 48.2934 5.12274 47.1215L23.9999 28.2422L42.8771 47.1215C44.049 48.2934 45.9491 48.2934 47.1209 47.1215C48.2928 45.9496 48.2928 44.0495 47.1209 42.8777L28.2418 24.0004Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_1157_314'%3e%3crect width='48' height='48' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 768px) {
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

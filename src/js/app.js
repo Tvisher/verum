@@ -207,6 +207,10 @@ document.addEventListener('click', (e) => {
         document.querySelector('[data-material-slider].show').classList.remove('show');
         document.querySelector(`[data-material-slider='${materialVariantId}']`).classList.add('show');
     }
+    //Открытие модального окна с формой
+    if (target.closest('[data-open-modal]')) {
+        document.querySelector('.modal-form').classList.add('show');
+    }
 });
 
 // Маска на номера телефона
