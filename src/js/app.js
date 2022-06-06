@@ -13,6 +13,7 @@ import Swiper, {
 import AOS from 'aos';
 import IMask from 'imask';
 
+
 // Проверка поддержки webP
 baseFunction.testWebP();
 
@@ -188,6 +189,7 @@ AOS.init({
 
 //логика работы меню бургер
 document.addEventListener('click', (e) => {
+    e.preventDefault();
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
