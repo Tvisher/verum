@@ -189,7 +189,6 @@ AOS.init({
 
 //логика работы меню бургер
 document.addEventListener('click', (e) => {
-    e.preventDefault();
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
         target.closest('[data-burger-menu]').classList.toggle('active');
@@ -211,6 +210,7 @@ document.addEventListener('click', (e) => {
     }
     //Открытие модального окна с формой
     if (target.closest('[data-open-modal]')) {
+        e.preventDefault();
         document.querySelector('.modal-form').classList.add('show');
     }
 });
