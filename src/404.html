@@ -1,0 +1,159 @@
+@@include('./html/head.html',{
+"title": "404"
+})
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">
+                    <img src="@img/logo-w-descr.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                            <a href="services.html">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="list-item" data-aos="fade-in" data-aos-delay="400">
+                            <a href="catalog.html">
+                                Каталог
+                            </a>
+                        </li>
+                        <li class="list-item" data-aos="fade-in" data-aos-delay="600">
+                            <a href="projects.html">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="list-item" data-aos="fade-in" data-aos-delay="800">
+                            <a href="contacts.html">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__phone" data-aos="fade-down">
+                    <a class="header__phone-link" href="tel:+78122230168">+7 (812) 223 01 68</a>
+                    <span>заказать звонок</span>
+                </div>
+                <div class="header__burger" data-burger-menu data-aos="zoom-in">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" data-header-menu>
+            <div class="container">
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li class="list-item">
+                            <a href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                Каталог
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="tel:+78122230168" class="mobile-menu__phone">+7 (812) 223 01 68</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="back-wrapper">
+                    <div class="back-wrapper__content">
+                        <span style="font-weight: 400;
+                        font-size: 36px;
+                        line-height: 120%;margin-bottom: 20px;color: #1E2023;">Упс, такой страницы нет</span>
+                        <span style="font-weight: 400;
+                        font-size: 24px;margin-bottom: 10px;color: #1E2023;">Возможно ее никогда и небыло...</span>
+                        <span style="font-weight: 400;
+                        font-size: 14px;margin-bottom: 60px; color: #59677E;">Перейдите на главную страницу или посмотрите наш инстаграмм</span>
+                        <a href="#" class="btn primaryBtn">Главная странциа</a>
+                    </div>
+                    <div class="back-wrapper__img">
+                        <img src="@img/404-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .back-wrapper {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .back-wrapper__content,
+            .back-wrapper__img {
+                flex: 0 0 50%;
+            }
+
+            @media (max-width: 992px) {
+                .back-wrapper {
+                    flex-direction: column;
+                }
+
+                .back-wrapper__img {
+                    order: -1;
+                }
+
+                .back-wrapper__content {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </main>
+    <footer style="margin-top: auto;">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper__item start" data-aos="fade-in" data-aos-delay="800">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Все права защищены © 2022</a>
+                </div>
+                <div class="footer-wrapper__item logo" data-aos="zoom-in-down" data-aos-delay="400">
+                    <a href="#">
+                        <!-- <img src="@img/logo-white.svg" alt=""> -->
+                        <img src="@img/logo-w-descr.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-wrapper__item last" data-aos="fade-in" data-aos-delay="800">
+                    <a href="#">Дизайн и разработка</a>
+                    <a href="#">Voxel.kz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/app.min.js"></script>
+
+</html>
